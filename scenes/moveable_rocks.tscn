@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp4nxig24767"]
+
+[ext_resource type="Script" uid="uid://dcl7wfa7dkb4m" path="res://scripts/moveable_rocks.gd" id="1_1mgys"]
+[ext_resource type="Texture2D" uid="uid://btqoe58gqyg05" path="res://assets/roguelikeSheet_transparent.png" id="1_780yh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_780yh"]
+size = Vector2(16, 16)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+z_index = 2
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_1mgys")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_780yh")
+region_enabled = true
+region_rect = Rect2(939, 514, 8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_780yh")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-9, 0)
+collision_mask = 2
+
+[node name="RayCastUp" type="RayCast2D" parent="."]
+target_position = Vector2(0, -9)
+collision_mask = 2
+
+[node name="RayCastDown" type="RayCast2D" parent="."]
+target_position = Vector2(0, 9)
+collision_mask = 2
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(9, 0)
+collision_mask = 2
