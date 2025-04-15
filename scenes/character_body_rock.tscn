@@ -22,17 +22,13 @@ region_rect = Rect2(939, 514, 8, 8)
 shape = SubResource("RectangleShape2D_tx4kr")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-enabled = false
-target_position = Vector2(-14, 0)
+target_position = Vector2(-10, 0)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-enabled = false
-target_position = Vector2(14, 0)
+target_position = Vector2(10, 0)
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
-enabled = false
-target_position = Vector2(0, -14)
+target_position = Vector2(0, -10)
 
 [node name="RayCastDown" type="RayCast2D" parent="."]
-enabled = false
-target_position = Vector2(0, 14)
+target_position = Vector2(0, 10)

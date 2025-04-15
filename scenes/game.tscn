@@ -142,6 +142,7 @@ texture = ExtResource("2_yqjtg")
 [sub_resource type="TileSet" id="TileSet_lbhrr"]
 physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 11
+physics_layer_0/collision_priority = 15.0
 sources/1 = SubResource("TileSetAtlasSource_lnu2h")
 
 [node name="Game" type="Node2D"]
@@ -163,7 +164,7 @@ position = Vector2(96, 46)
 zoom = Vector2(2.5, 2.5)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(89, -51)
+position = Vector2(110, 40)
 
 [node name="solution_zone" parent="." instance=ExtResource("4_iywne")]
 position = Vector2(184, -8)
