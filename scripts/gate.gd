@@ -2,6 +2,8 @@ extends StaticBody2D
 
 @onready var solution_1 = $solution_zone1
 @onready var solution_2 = $solution_zone2
+@onready var solution_3 = $solution_zone3
+@onready var solution_4 = $solution_zone4
 @onready var collision = $CollisionShape2D
 
 # Called when the node enters the scene tree for the first time.

@@ -8,6 +8,7 @@ extends CharacterBody2D
 
 const speed = 300
 var kick: bool
+var collision
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,4 +35,18 @@ func _physics_process(delta: float) -> void:
 		if ray_cast_down.is_colliding() and player.player_looking.y == -1:
 			velocity.x = 0
 			velocity.y = -1 * speed * delta
-	move_and_collide(velocity)
+	if velocity:
+		collision_shape_2d.scale.x = .98
+		collision_shape_2d.scale.y = .98
+		move_and_collide(velocity)
+		collision = move_and_collide(velocity)
+	if collision:
+		collision_shape_2d.scale.x = 1
+		collision_shape_2d.scale.y = 1
+		if velocity.y:
+			position.y = roundf(position.y)
+		if velocity.x:
+			position.x = roundf(position.x)
+		velocity.x = 0
+		velocity.y = 0
+		collision = null
