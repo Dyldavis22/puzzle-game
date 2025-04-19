@@ -169,11 +169,9 @@ script = ExtResource("4_p57ef")
 
 [node name="solution_zone1" parent="gate" instance=ExtResource("4_iywne")]
 position = Vector2(80, 18)
-collision_mask = 2
 
 [node name="solution_zone2" parent="gate" instance=ExtResource("4_iywne")]
 position = Vector2(-96, 18)
-collision_mask = 2
 
 [node name="solution_zone3" parent="gate" instance=ExtResource("4_iywne")]
 position = Vector2(-96, 226)

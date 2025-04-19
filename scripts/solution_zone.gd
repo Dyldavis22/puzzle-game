@@ -14,7 +14,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body:Node2D) -> void:
 	covered = true
-
+	print(name + str(covered))
 
 func _on_body_exited(body: Node2D) -> void:
 	covered = false
+	print(name + str(covered))

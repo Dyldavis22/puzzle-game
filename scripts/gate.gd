@@ -13,6 +13,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if solution_1.covered == true and solution_2.covered == true:
+	if solution_1.covered == true and solution_2.covered == true and solution_3.covered == true and solution_4.covered == true:
 		$Sprite2D.visible = not visible
 		collision.set_deferred('disabled', true)

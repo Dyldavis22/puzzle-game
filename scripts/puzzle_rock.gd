@@ -36,8 +36,8 @@ func _physics_process(delta: float) -> void:
 			velocity.x = 0
 			velocity.y = -1 * speed * delta
 	if velocity:
-		collision_shape_2d.scale.x = .98
-		collision_shape_2d.scale.y = .98
+		collision_shape_2d.scale.x = .95
+		collision_shape_2d.scale.y = .95
 		move_and_collide(velocity)
 		collision = move_and_collide(velocity)
 	if collision:

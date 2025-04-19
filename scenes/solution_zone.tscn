@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://2lmgw7a8fbre" path="res://assets/world_tileset.png" id="1_oapdg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyxb4"]
-size = Vector2(16, 16)
+size = Vector2(14, 14)
 
 [node name="solution_zone" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_kyxb4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
