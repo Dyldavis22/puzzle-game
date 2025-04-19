@@ -1,6 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://h125n4mauwce"]
+[gd_scene load_steps=4 format=3 uid="uid://h125n4mauwce"]
 
 [ext_resource type="Texture2D" uid="uid://2lmgw7a8fbre" path="res://assets/world_tileset.png" id="1_xfvdi"]
+
+[sub_resource type="GDScript" id="GDScript_xfvdi"]
+script/source = "extends StaticBody2D
+
+@onready var solution_zone = $solution_zone
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+	
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if solution_zone.covered == true:
+		queue_free()
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwxio"]
 size = Vector2(14, 13)
@@ -8,6 +24,7 @@ size = Vector2(14, 13)
 [node name="gate" type="StaticBody2D"]
 collision_layer = 8
 collision_mask = 11
+script = SubResource("GDScript_xfvdi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xfvdi")
